@@ -32,8 +32,8 @@
             this.Sub = new System.Windows.Forms.Button();
             this.Mult = new System.Windows.Forms.Button();
             this.Div = new System.Windows.Forms.Button();
-            this.A = new System.Windows.Forms.MaskedTextBox();
-            this.B = new System.Windows.Forms.MaskedTextBox();
+            this.FirstValue = new System.Windows.Forms.MaskedTextBox();
+            this.SecondValue = new System.Windows.Forms.MaskedTextBox();
             this.Result = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -77,21 +77,21 @@
             this.Div.UseVisualStyleBackColor = true;
             this.Div.Click += new System.EventHandler(this.Compute);
             // 
-            // A
+            // FirstValue
             // 
-            this.A.Location = new System.Drawing.Point(0, 12);
-            this.A.Mask = "00000000000";
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(100, 20);
-            this.A.TabIndex = 7;
+            this.FirstValue.Location = new System.Drawing.Point(0, 12);
+            this.FirstValue.Mask = "00000000000";
+            this.FirstValue.Name = "FirstValue";
+            this.FirstValue.Size = new System.Drawing.Size(100, 20);
+            this.FirstValue.TabIndex = 7;
             // 
-            // B
+            // SecondValue
             // 
-            this.B.Location = new System.Drawing.Point(124, 12);
-            this.B.Mask = "00000000000";
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(100, 20);
-            this.B.TabIndex = 8;
+            this.SecondValue.Location = new System.Drawing.Point(124, 12);
+            this.SecondValue.Mask = "00000000000";
+            this.SecondValue.Name = "SecondValue";
+            this.SecondValue.Size = new System.Drawing.Size(100, 20);
+            this.SecondValue.TabIndex = 8;
             // 
             // Result
             // 
@@ -107,8 +107,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 262);
             this.Controls.Add(this.Result);
-            this.Controls.Add(this.B);
-            this.Controls.Add(this.A);
+            this.Controls.Add(this.SecondValue);
+            this.Controls.Add(this.FirstValue);
             this.Controls.Add(this.Div);
             this.Controls.Add(this.Mult);
             this.Controls.Add(this.Sub);
@@ -126,8 +126,8 @@
         private System.Windows.Forms.Button Sub;
         private System.Windows.Forms.Button Mult;
         private System.Windows.Forms.Button Div;
-        private System.Windows.Forms.MaskedTextBox A;
-        private System.Windows.Forms.MaskedTextBox B;
+        private System.Windows.Forms.MaskedTextBox FirstValue;
+        private System.Windows.Forms.MaskedTextBox SecondValue;
         private System.Windows.Forms.TextBox Result;
     }
 }

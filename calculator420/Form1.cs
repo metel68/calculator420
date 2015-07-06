@@ -25,8 +25,8 @@ namespace Calculator
 
         private void Compute(object sender, EventArgs e)
         {
-            double firstArgument = StrToInt(A.Text);
-            double secondArgument = StrToInt(B.Text);
+            double firstArgument = StrToInt(FirstValue.Text);
+            double secondArgument = StrToInt(SecondValue.Text);
             double result;
                 switch (((Button)sender).Name)
                 {
