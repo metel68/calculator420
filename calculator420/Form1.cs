@@ -33,7 +33,16 @@ namespace calculator420
 
         private void Add_Click(object sender, EventArgs e)
         {
-            Result.Text = A.Text + B.Text;
+            double firstArgument, secondArgument;
+            if (double.TryParse(A.Text, out firstArgument) &&
+                double.TryParse(B.Text, out secondArgument))
+            {
+                Result.Text = Convert.ToString(firstArgument + secondArgument);
+            }
+            else
+            {
+                Result.Text = "Error";
+            }
         }
     }
 }
