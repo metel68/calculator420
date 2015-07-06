@@ -23,47 +23,30 @@ namespace Calculator
             }
         }
 
-        private String Compute(double firstArgument, double secondArgument, char operation)
+        private void Compute(object sender, EventArgs e)
         {
+            double firstArgument = StrToInt(A.Text);
+            double secondArgument = StrToInt(B.Text);
             double result;
-                switch (operation)
+                switch (((Button)sender).Name)
                 {
-                    case '+':
+                    case "Add":
                         result = firstArgument + secondArgument;
                         break;
-                    case '-': 
+                    case "Sub": 
                         result = firstArgument - secondArgument;
                         break;
-                    case '*': 
+                    case "Mult": 
                         result = firstArgument * secondArgument;
                         break;
-                    case '/': 
+                    case "Div": 
                         result = firstArgument / secondArgument;
                         break;
                     default :
                         throw new Exception("Undefined operation");
                 }
-                return Convert.ToString(result);
+                Result.Text = Convert.ToString(result);
         }
 
-        private void AddClick(object sender, EventArgs e)
-        {
-            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '+');
-        }
-
-        private void SubClick(object sender, EventArgs e)
-        {
-            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '-');
-        }
-
-        private void MultClick(object sender, EventArgs e)
-        {
-            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '*');
-        }
-
-        private void DivClick(object sender, EventArgs e)
-        {
-            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '/');
-        }
     }
 }
