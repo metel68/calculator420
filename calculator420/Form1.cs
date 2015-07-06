@@ -1,48 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-namespace calculator420
+namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private double StrToInt(String operand)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Add_Click(object sender, EventArgs e)
-        {
-            double firstArgument, secondArgument;
-            if (double.TryParse(A.Text, out firstArgument) &&
-                double.TryParse(B.Text, out secondArgument))
+            double result;
+            if (double.TryParse(operand, out result))
             {
-                Result.Text = Convert.ToString(firstArgument + secondArgument);
+                return result;
             }
             else
             {
-                Result.Text = "Error";
+                throw new Exception("Input error");
             }
+        }
+
+        private String Compute(double firstArgument, double secondArgument, char operation)
+        {
+            double result;
+                switch (operation)
+                {
+                    case '+':
+                        result = firstArgument + secondArgument;
+                        break;
+                    case '-': 
+                        result = firstArgument - secondArgument;
+                        break;
+                    case '*': 
+                        result = firstArgument * secondArgument;
+                        break;
+                    case '/': 
+                        result = firstArgument / secondArgument;
+                        break;
+                    default :
+                        throw new Exception("Undefined operation");
+                }
+                return Convert.ToString(result);
+        }
+
+        private void AddClick(object sender, EventArgs e)
+        {
+            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '+');
+        }
+
+        private void SubClick(object sender, EventArgs e)
+        {
+            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '-');
+        }
+
+        private void MultClick(object sender, EventArgs e)
+        {
+            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '*');
+        }
+
+        private void DivClick(object sender, EventArgs e)
+        {
+            Result.Text = Compute(StrToInt(A.Text), StrToInt(B.Text), '/');
         }
     }
 }

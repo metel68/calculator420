@@ -1,6 +1,6 @@
-﻿namespace calculator420
+﻿namespace Calculator
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -45,7 +45,7 @@
             this.Add.TabIndex = 3;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.Add.Click += new System.EventHandler(this.AddClick);
             // 
             // Sub
             // 
@@ -55,6 +55,7 @@
             this.Sub.TabIndex = 4;
             this.Sub.Text = "-";
             this.Sub.UseVisualStyleBackColor = true;
+            this.Sub.Click += new System.EventHandler(this.SubClick);
             // 
             // Mult
             // 
@@ -64,6 +65,7 @@
             this.Mult.TabIndex = 5;
             this.Mult.Text = "*";
             this.Mult.UseVisualStyleBackColor = true;
+            this.Mult.Click += new System.EventHandler(this.MultClick);
             // 
             // Div
             // 
@@ -73,6 +75,7 @@
             this.Div.TabIndex = 6;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = true;
+            this.Div.Click += new System.EventHandler(this.DivClick);
             // 
             // A
             // 
@@ -97,9 +100,8 @@
             this.Result.ReadOnly = true;
             this.Result.Size = new System.Drawing.Size(100, 20);
             this.Result.TabIndex = 9;
-            this.Result.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,9 +113,8 @@
             this.Controls.Add(this.Mult);
             this.Controls.Add(this.Sub);
             this.Controls.Add(this.Add);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "MainForm";
+            this.Text = "Calculator 420";
             this.ResumeLayout(false);
             this.PerformLayout();
 
