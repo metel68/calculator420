@@ -26,9 +26,14 @@ namespace calculator420
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            Result.Text = A.Text + B.Text;
         }
     }
 }
