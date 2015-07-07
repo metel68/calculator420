@@ -47,7 +47,7 @@
             this.Add.TabIndex = 3;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Compute);
+            this.Add.Click += new System.EventHandler(this.ComputeTwo);
             // 
             // Sub
             // 
@@ -57,7 +57,7 @@
             this.Sub.TabIndex = 4;
             this.Sub.Text = "-";
             this.Sub.UseVisualStyleBackColor = true;
-            this.Sub.Click += new System.EventHandler(this.Compute);
+            this.Sub.Click += new System.EventHandler(this.ComputeTwo);
             // 
             // Mult
             // 
@@ -67,7 +67,7 @@
             this.Mult.TabIndex = 5;
             this.Mult.Text = "*";
             this.Mult.UseVisualStyleBackColor = true;
-            this.Mult.Click += new System.EventHandler(this.Compute);
+            this.Mult.Click += new System.EventHandler(this.ComputeTwo);
             // 
             // Div
             // 
@@ -77,7 +77,7 @@
             this.Div.TabIndex = 6;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = true;
-            this.Div.Click += new System.EventHandler(this.Compute);
+            this.Div.Click += new System.EventHandler(this.ComputeTwo);
             // 
             // Result
             // 
@@ -95,7 +95,7 @@
             this.Abs.TabIndex = 10;
             this.Abs.Text = "abs";
             this.Abs.UseVisualStyleBackColor = true;
-            this.Abs.Click += new System.EventHandler(this.Process);
+            this.Abs.Click += new System.EventHandler(this.ComputeOne);
             // 
             // Sin
             // 
@@ -105,7 +105,7 @@
             this.Sin.TabIndex = 11;
             this.Sin.Text = "sin";
             this.Sin.UseVisualStyleBackColor = true;
-            this.Sin.Click += new System.EventHandler(this.Process);
+            this.Sin.Click += new System.EventHandler(this.ComputeOne);
             // 
             // FirstValue
             // 
