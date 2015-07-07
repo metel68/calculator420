@@ -39,6 +39,10 @@
             this.SecondValue = new System.Windows.Forms.TextBox();
             this.Cos = new System.Windows.Forms.Button();
             this.Tan = new System.Windows.Forms.Button();
+            this.Arccos = new System.Windows.Forms.Button();
+            this.Sqrt = new System.Windows.Forms.Button();
+            this.Arcsin = new System.Windows.Forms.Button();
+            this.Arctan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Add
@@ -143,11 +147,55 @@
             this.Tan.UseVisualStyleBackColor = true;
             this.Tan.Click += new System.EventHandler(this.ComputeOne);
             // 
+            // Arccos
+            // 
+            this.Arccos.Location = new System.Drawing.Point(124, 196);
+            this.Arccos.Name = "Arccos";
+            this.Arccos.Size = new System.Drawing.Size(75, 23);
+            this.Arccos.TabIndex = 16;
+            this.Arccos.Text = "arccos";
+            this.Arccos.UseVisualStyleBackColor = true;
+            this.Arccos.Click += new System.EventHandler(this.ComputeOne);
+            // 
+            // Sqrt
+            // 
+            this.Sqrt.Location = new System.Drawing.Point(12, 50);
+            this.Sqrt.Name = "Sqrt";
+            this.Sqrt.Size = new System.Drawing.Size(75, 23);
+            this.Sqrt.TabIndex = 17;
+            this.Sqrt.Text = "sqrt";
+            this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.ComputeOne);
+            // 
+            // Arcsin
+            // 
+            this.Arcsin.Location = new System.Drawing.Point(124, 167);
+            this.Arcsin.Name = "Arcsin";
+            this.Arcsin.Size = new System.Drawing.Size(75, 23);
+            this.Arcsin.TabIndex = 18;
+            this.Arcsin.Text = "arcsin";
+            this.Arcsin.UseVisualStyleBackColor = true;
+            this.Arcsin.Click += new System.EventHandler(this.ComputeOne);
+            // 
+            // Arctan
+            // 
+            this.Arctan.Location = new System.Drawing.Point(124, 225);
+            this.Arctan.Name = "Arctan";
+            this.Arctan.Size = new System.Drawing.Size(75, 23);
+            this.Arctan.TabIndex = 19;
+            this.Arctan.Text = "arctan";
+            this.Arctan.UseVisualStyleBackColor = true;
+            this.Arctan.Click += new System.EventHandler(this.ComputeOne);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 262);
+            this.Controls.Add(this.Arctan);
+            this.Controls.Add(this.Arcsin);
+            this.Controls.Add(this.Sqrt);
+            this.Controls.Add(this.Arccos);
             this.Controls.Add(this.Tan);
             this.Controls.Add(this.Cos);
             this.Controls.Add(this.SecondValue);
@@ -179,6 +227,10 @@
         private System.Windows.Forms.TextBox SecondValue;
         private System.Windows.Forms.Button Cos;
         private System.Windows.Forms.Button Tan;
+        private System.Windows.Forms.Button Arccos;
+        private System.Windows.Forms.Button Sqrt;
+        private System.Windows.Forms.Button Arcsin;
+        private System.Windows.Forms.Button Arctan;
     }
 }
 
