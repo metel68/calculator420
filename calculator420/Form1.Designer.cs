@@ -37,6 +37,8 @@
             this.Sin = new System.Windows.Forms.Button();
             this.FirstValue = new System.Windows.Forms.TextBox();
             this.SecondValue = new System.Windows.Forms.TextBox();
+            this.Cos = new System.Windows.Forms.Button();
+            this.Tan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Add
@@ -121,11 +123,33 @@
             this.SecondValue.Size = new System.Drawing.Size(100, 20);
             this.SecondValue.TabIndex = 13;
             // 
+            // Cos
+            // 
+            this.Cos.Location = new System.Drawing.Point(124, 109);
+            this.Cos.Name = "Cos";
+            this.Cos.Size = new System.Drawing.Size(75, 23);
+            this.Cos.TabIndex = 14;
+            this.Cos.Text = "cos";
+            this.Cos.UseVisualStyleBackColor = true;
+            this.Cos.Click += new System.EventHandler(this.ComputeOne);
+            // 
+            // Tan
+            // 
+            this.Tan.Location = new System.Drawing.Point(124, 138);
+            this.Tan.Name = "Tan";
+            this.Tan.Size = new System.Drawing.Size(75, 23);
+            this.Tan.TabIndex = 15;
+            this.Tan.Text = "tan";
+            this.Tan.UseVisualStyleBackColor = true;
+            this.Tan.Click += new System.EventHandler(this.ComputeOne);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 262);
+            this.Controls.Add(this.Tan);
+            this.Controls.Add(this.Cos);
             this.Controls.Add(this.SecondValue);
             this.Controls.Add(this.FirstValue);
             this.Controls.Add(this.Sin);
@@ -153,6 +177,8 @@
         private System.Windows.Forms.Button Sin;
         private System.Windows.Forms.TextBox FirstValue;
         private System.Windows.Forms.TextBox SecondValue;
+        private System.Windows.Forms.Button Cos;
+        private System.Windows.Forms.Button Tan;
     }
 }
 

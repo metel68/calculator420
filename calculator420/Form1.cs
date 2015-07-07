@@ -29,18 +29,21 @@ namespace Calculator
         private void ComputeOne(object sender, EventArgs e)
         {
             double argument = StrToInt(FirstValue.Text);
-            double result;
-            result = OneArgmumentFactory.CreateCalculator(((Button)sender).Name).Calculate(argument);
+            string operation = ((Button) sender).Name;
+            var op = OneArgmumentFactory.CreateCalculator(operation);
+            double result = op.Calculate(argument);
             Result.Text = Convert.ToString(result);
-         }
+        }
 
-    private void ComputeTwo(object sender, EventArgs e)
+        private void ComputeTwo(object sender, EventArgs e)
         {
             double firstArgument = StrToInt(FirstValue.Text);
             double secondArgument = StrToInt(SecondValue.Text);
-            double result;
-            result = TwoArgmumentFactory.CreateCalculator(((Button)sender).Name).Calculate(firstArgument, secondArgument);
+            string operation = ((Button) sender).Name;
+            var op = TwoArgmumentFactory.CreateCalculator(operation);
+            double result = op.Calculate(firstArgument, secondArgument);
             Result.Text = Convert.ToString(result);
         }
+
     }
 }
