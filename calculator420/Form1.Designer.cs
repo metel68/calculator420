@@ -43,11 +43,14 @@
             this.Sqrt = new System.Windows.Forms.Button();
             this.Arcsin = new System.Windows.Forms.Button();
             this.Arctan = new System.Windows.Forms.Button();
+            this.Cuntize = new System.Windows.Forms.Button();
+            this.Root = new System.Windows.Forms.Button();
+            this.Pow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(302, 51);
+            this.Add.Location = new System.Drawing.Point(331, 38);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 3;
@@ -57,7 +60,7 @@
             // 
             // Sub
             // 
-            this.Sub.Location = new System.Drawing.Point(302, 80);
+            this.Sub.Location = new System.Drawing.Point(331, 67);
             this.Sub.Name = "Sub";
             this.Sub.Size = new System.Drawing.Size(75, 23);
             this.Sub.TabIndex = 4;
@@ -67,7 +70,7 @@
             // 
             // Mult
             // 
-            this.Mult.Location = new System.Drawing.Point(302, 109);
+            this.Mult.Location = new System.Drawing.Point(331, 96);
             this.Mult.Name = "Mult";
             this.Mult.Size = new System.Drawing.Size(75, 23);
             this.Mult.TabIndex = 5;
@@ -77,7 +80,7 @@
             // 
             // Div
             // 
-            this.Div.Location = new System.Drawing.Point(302, 138);
+            this.Div.Location = new System.Drawing.Point(331, 125);
             this.Div.Name = "Div";
             this.Div.Size = new System.Drawing.Size(75, 23);
             this.Div.TabIndex = 6;
@@ -87,15 +90,15 @@
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(302, 12);
+            this.Result.Location = new System.Drawing.Point(224, 12);
             this.Result.Name = "Result";
             this.Result.ReadOnly = true;
-            this.Result.Size = new System.Drawing.Size(100, 20);
+            this.Result.Size = new System.Drawing.Size(182, 20);
             this.Result.TabIndex = 9;
             // 
             // Abs
             // 
-            this.Abs.Location = new System.Drawing.Point(124, 50);
+            this.Abs.Location = new System.Drawing.Point(135, 38);
             this.Abs.Name = "Abs";
             this.Abs.Size = new System.Drawing.Size(75, 23);
             this.Abs.TabIndex = 10;
@@ -105,7 +108,7 @@
             // 
             // Sin
             // 
-            this.Sin.Location = new System.Drawing.Point(124, 79);
+            this.Sin.Location = new System.Drawing.Point(135, 67);
             this.Sin.Name = "Sin";
             this.Sin.Size = new System.Drawing.Size(75, 23);
             this.Sin.TabIndex = 11;
@@ -122,14 +125,14 @@
             // 
             // SecondValue
             // 
-            this.SecondValue.Location = new System.Drawing.Point(124, 12);
+            this.SecondValue.Location = new System.Drawing.Point(118, 12);
             this.SecondValue.Name = "SecondValue";
             this.SecondValue.Size = new System.Drawing.Size(100, 20);
             this.SecondValue.TabIndex = 13;
             // 
             // Cos
             // 
-            this.Cos.Location = new System.Drawing.Point(124, 109);
+            this.Cos.Location = new System.Drawing.Point(135, 97);
             this.Cos.Name = "Cos";
             this.Cos.Size = new System.Drawing.Size(75, 23);
             this.Cos.TabIndex = 14;
@@ -139,7 +142,7 @@
             // 
             // Tan
             // 
-            this.Tan.Location = new System.Drawing.Point(124, 138);
+            this.Tan.Location = new System.Drawing.Point(135, 126);
             this.Tan.Name = "Tan";
             this.Tan.Size = new System.Drawing.Size(75, 23);
             this.Tan.TabIndex = 15;
@@ -149,7 +152,7 @@
             // 
             // Arccos
             // 
-            this.Arccos.Location = new System.Drawing.Point(124, 196);
+            this.Arccos.Location = new System.Drawing.Point(135, 184);
             this.Arccos.Name = "Arccos";
             this.Arccos.Size = new System.Drawing.Size(75, 23);
             this.Arccos.TabIndex = 16;
@@ -159,7 +162,7 @@
             // 
             // Sqrt
             // 
-            this.Sqrt.Location = new System.Drawing.Point(12, 50);
+            this.Sqrt.Location = new System.Drawing.Point(12, 38);
             this.Sqrt.Name = "Sqrt";
             this.Sqrt.Size = new System.Drawing.Size(75, 23);
             this.Sqrt.TabIndex = 17;
@@ -169,7 +172,7 @@
             // 
             // Arcsin
             // 
-            this.Arcsin.Location = new System.Drawing.Point(124, 167);
+            this.Arcsin.Location = new System.Drawing.Point(135, 155);
             this.Arcsin.Name = "Arcsin";
             this.Arcsin.Size = new System.Drawing.Size(75, 23);
             this.Arcsin.TabIndex = 18;
@@ -179,7 +182,7 @@
             // 
             // Arctan
             // 
-            this.Arctan.Location = new System.Drawing.Point(124, 225);
+            this.Arctan.Location = new System.Drawing.Point(135, 213);
             this.Arctan.Name = "Arctan";
             this.Arctan.Size = new System.Drawing.Size(75, 23);
             this.Arctan.TabIndex = 19;
@@ -187,11 +190,44 @@
             this.Arctan.UseVisualStyleBackColor = true;
             this.Arctan.Click += new System.EventHandler(this.ComputeOne);
             // 
+            // Cuntize
+            // 
+            this.Cuntize.Location = new System.Drawing.Point(12, 242);
+            this.Cuntize.Name = "Cuntize";
+            this.Cuntize.Size = new System.Drawing.Size(394, 23);
+            this.Cuntize.TabIndex = 20;
+            this.Cuntize.Text = "Сделать чего-нить";
+            this.Cuntize.UseVisualStyleBackColor = true;
+            this.Cuntize.Click += new System.EventHandler(this.SendUser);
+            // 
+            // Root
+            // 
+            this.Root.Location = new System.Drawing.Point(331, 183);
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(75, 23);
+            this.Root.TabIndex = 21;
+            this.Root.Text = "root";
+            this.Root.UseVisualStyleBackColor = true;
+            this.Root.Click += new System.EventHandler(this.ComputeTwo);
+            // 
+            // Pow
+            // 
+            this.Pow.Location = new System.Drawing.Point(331, 154);
+            this.Pow.Name = "Pow";
+            this.Pow.Size = new System.Drawing.Size(75, 23);
+            this.Pow.TabIndex = 22;
+            this.Pow.Text = "pow";
+            this.Pow.UseVisualStyleBackColor = true;
+            this.Pow.Click += new System.EventHandler(this.ComputeTwo);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 262);
+            this.ClientSize = new System.Drawing.Size(406, 271);
+            this.Controls.Add(this.Pow);
+            this.Controls.Add(this.Root);
+            this.Controls.Add(this.Cuntize);
             this.Controls.Add(this.Arctan);
             this.Controls.Add(this.Arcsin);
             this.Controls.Add(this.Sqrt);
@@ -231,6 +267,9 @@
         private System.Windows.Forms.Button Sqrt;
         private System.Windows.Forms.Button Arcsin;
         private System.Windows.Forms.Button Arctan;
+        private System.Windows.Forms.Button Cuntize;
+        private System.Windows.Forms.Button Root;
+        private System.Windows.Forms.Button Pow;
     }
 }
 

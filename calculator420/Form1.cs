@@ -44,6 +44,37 @@ namespace Calculator
             double result = op.Calculate(firstArgument, secondArgument);
             Result.Text = Convert.ToString(result);
         }
+        static Int16 i=0;
+        private void SendUser(object sender, EventArgs e)
+        {
+            i++;
+            switch (i)
+            {
+                case 1:
+                    Result.Text = "Чего-нить";
+                    break;
+                case 2:
+                    Result.Text = "А я знаю, чего вам надо?";
+                    break;
+                case 3:
+                    Result.Text = "Определитесь уже?";
+                    break;
+                case 4:
+                    Result.Text = "42";
+                    break;
+                case 5:
+                    Result.Text = "42, я сказал!";
+                    break;
+                case 6:
+                    Result.Text = "А не знаю, просто 42 и всё";
+                    break;
+                case 10:
+                    Result.Text = "Задолбали";
+                    break;
+                case 11:
+                    throw new Exception("Пользователь задолбал программу");
+            }
+        }
 
     }
 }
