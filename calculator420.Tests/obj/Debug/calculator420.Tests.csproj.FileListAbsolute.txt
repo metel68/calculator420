@@ -1,9 +1,0 @@
-D:\calculator420\calculator420.Tests\bin\Debug\calculator420.Tests.dll
-D:\calculator420\calculator420.Tests\bin\Debug\calculator420.Tests.pdb
-D:\calculator420\calculator420.Tests\bin\Debug\nunit.framework.dll
-D:\calculator420\calculator420.Tests\bin\Debug\nunit.framework.xml
-D:\calculator420\calculator420.Tests\obj\Debug\calculator420.Tests.csprojResolveAssemblyReference.cache
-D:\calculator420\calculator420.Tests\obj\Debug\calculator420.Tests.dll
-D:\calculator420\calculator420.Tests\obj\Debug\calculator420.Tests.pdb
-D:\calculator420\calculator420.Tests\bin\Debug\calculator420.exe
-D:\calculator420\calculator420.Tests\bin\Debug\calculator420.pdb
