@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraySort\ArraySortFactory.cs" />
+    <Compile Include="ArraySort\IOperation.cs" />
     <Compile Include="OneArgument\Arccos.cs" />
     <Compile Include="OneArgument\Arcsin.cs" />
     <Compile Include="OneArgument\Abs.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="OneArgument\IOperation.cs" />
     <Compile Include="OneArgument\OneArgmumentFactory.cs" />
     <Compile Include="OneArgument\Program.cs" />
+    <Compile Include="ArraySort\Sort.cs" />
     <Compile Include="OneArgument\Tan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OneArgument\Sin.cs" />
@@ -88,6 +91,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

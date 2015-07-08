@@ -46,6 +46,8 @@
             this.Cuntize = new System.Windows.Forms.Button();
             this.Root = new System.Windows.Forms.Button();
             this.Pow = new System.Windows.Forms.Button();
+            this.FastSort = new System.Windows.Forms.Button();
+            this.SlowSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Add
@@ -162,7 +164,7 @@
             // 
             // Sqrt
             // 
-            this.Sqrt.Location = new System.Drawing.Point(12, 38);
+            this.Sqrt.Location = new System.Drawing.Point(331, 213);
             this.Sqrt.Name = "Sqrt";
             this.Sqrt.Size = new System.Drawing.Size(75, 23);
             this.Sqrt.TabIndex = 17;
@@ -220,11 +222,33 @@
             this.Pow.UseVisualStyleBackColor = true;
             this.Pow.Click += new System.EventHandler(this.ComputeTwo);
             // 
+            // FastSort
+            // 
+            this.FastSort.Location = new System.Drawing.Point(12, 67);
+            this.FastSort.Name = "FastSort";
+            this.FastSort.Size = new System.Drawing.Size(75, 23);
+            this.FastSort.TabIndex = 23;
+            this.FastSort.Text = "Sort it fast";
+            this.FastSort.UseVisualStyleBackColor = true;
+            this.FastSort.Click += new System.EventHandler(this.SortArray);
+            // 
+            // SlowSort
+            // 
+            this.SlowSort.Location = new System.Drawing.Point(12, 38);
+            this.SlowSort.Name = "SlowSort";
+            this.SlowSort.Size = new System.Drawing.Size(75, 23);
+            this.SlowSort.TabIndex = 24;
+            this.SlowSort.Text = "Sort it";
+            this.SlowSort.UseVisualStyleBackColor = true;
+            this.SlowSort.Click += new System.EventHandler(this.SortArray);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 271);
+            this.Controls.Add(this.SlowSort);
+            this.Controls.Add(this.FastSort);
             this.Controls.Add(this.Pow);
             this.Controls.Add(this.Root);
             this.Controls.Add(this.Cuntize);
@@ -270,6 +294,8 @@
         private System.Windows.Forms.Button Cuntize;
         private System.Windows.Forms.Button Root;
         private System.Windows.Forms.Button Pow;
+        private System.Windows.Forms.Button FastSort;
+        private System.Windows.Forms.Button SlowSort;
     }
 }
 

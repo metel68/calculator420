@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Resources;
 using System.Windows.Forms;
+using Calculator.ArraySort;
 using Calculator.OneArgument;
 using Calculator.TwoArgument;
 
@@ -43,6 +45,26 @@ namespace Calculator
             var op = TwoArgmumentFactory.CreateCalculator(operation);
             double result = op.Calculate(firstArgument, secondArgument);
             Result.Text = Convert.ToString(result);
+        }
+
+        private void SortArray(object sender, EventArgs e)
+        {
+            string[] divider = {","};
+            string[] stringArray = FirstValue.Text.Split(divider, StringSplitOptions.RemoveEmptyEntries);
+            double[] argument = new double[stringArray.Length];
+            for (Int16 i = 0; i < stringArray.Length; i++)
+            {
+                argument[i] = StrToInt(stringArray[i]);
+            }
+            string operation = ((Button)sender).Name;
+            var op = ArraySortFactory.CreateCalculator(operation);
+            op.Calculate(argument);
+            Result.Text = "";
+            for (Int16 i = 0; i < argument.Length; i++)
+            {
+                Result.Text += Convert.ToString(argument[i]);
+                Result.Text += ", ";
+            }
         }
         static Int16 i=0;
         private void SendUser(object sender, EventArgs e)
