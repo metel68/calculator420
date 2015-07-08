@@ -8,13 +8,14 @@ namespace calculator.Tests.OneArgument
 
     public class AbsTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(15, 15, 0.1)]
+        [TestCase(-6, 6, 0.1)]
+        [TestCase(0, 0, 0.1)]
+        public void CalculateTest(double argument, double result, double accracy)
         {
             var testingFunction = new Abs();
-            var control = Math.Abs(15);
-            var result = testingFunction.Calculate(15);
-            Assert.AreEqual(control,result);
+            var testResult = testingFunction.Calculate(argument);
+            Assert.AreEqual(result, testResult);
         }
     }
 }
