@@ -4,6 +4,11 @@ namespace Calculator.TwoArgument
 {
     public static class TwoArgmumentFactory
     {
+        /// <summary>
+        /// Creates and returns an object of selected two-operation calculator
+        /// </summary>
+        /// <param name="operation">Name of required operation</param>
+        /// <returns>Calculator object</returns>
         public static IOperation CreateCalculator(string operation)
         {
             switch (operation)

@@ -5,6 +5,11 @@ using NUnit.Framework;
 namespace calculator.Tests.TwoArgument
 {
     [TestFixture]
+    /// <summary>
+    /// Creates and returns an object of selected one-operation calculator
+    /// </summary>
+    /// <param name="operation">Name of required operation</param>
+    /// <returns>Calculator object</returns>
     public class TwoArgumentTests
     {
         [TestCase(typeof(Add), "Add")]

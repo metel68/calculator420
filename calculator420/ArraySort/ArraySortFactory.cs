@@ -5,6 +5,11 @@ namespace Calculator.ArraySort
 {
     public class ArraySortFactory
     {
+        /// <summary>
+        /// Creates and returns an object of selected sorter
+        /// </summary>
+        /// <param name="operation">Array sorting method</param>
+        /// <returns></returns>
         public static IOperation CreateCalculator(string operation)
         {
             switch (operation)

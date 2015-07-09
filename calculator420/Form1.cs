@@ -15,6 +15,10 @@ namespace Calculator
             InitializeComponent();
         }
 
+      /// <summary>
+      /// Event handler for one-operand functoins
+      /// </summary>
+      /// <param name="sender">Pressed button name</param>
         private void ComputeOne(object sender, EventArgs e)
         {
             var validator = new Validator();
@@ -25,6 +29,10 @@ namespace Calculator
             Result.Text = Convert.ToString(result);
         }
 
+        /// <summary>
+        /// Event handler for two-operand functoins
+        /// </summary>
+        /// <param name="sender">Pressed button name</param>
         private void ComputeTwo(object sender, EventArgs e)
         {
             var validator = new Validator();
@@ -36,6 +44,10 @@ namespace Calculator
             Result.Text = Convert.ToString(result);
         }
 
+        /// <summary>
+        /// Event handler for array sorting functoins
+        /// </summary>
+        /// <param name="sender">Pressed button name</param>
         private void SortArray(object sender, EventArgs e)
         {
             var validator = new Validator();
@@ -50,6 +62,8 @@ namespace Calculator
                 Result.Text += ", ";
             }
         }
+
+        //:trollface:
         static Int16 i=0;
         private void SendUser(object sender, EventArgs e)
         {
