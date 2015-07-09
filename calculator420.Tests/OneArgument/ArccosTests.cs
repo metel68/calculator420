@@ -9,7 +9,6 @@ namespace calculator.Tests.OneArgument
         public class ArccosTests
     {
         [TestCase(1, 0, 0.1)]
-       // [TestCase(-6, 0.2794, 0.0001)]
         [TestCase(0, 1.5707, 0.0001)]
         [TestCase(0.5, 1.0471, 0.0001)]
         [TestCase(-1, 3.1415, 0.0001)]
@@ -23,7 +22,7 @@ namespace calculator.Tests.OneArgument
         [ExpectedException(typeof(Exception))]
         public void ArcTestsNegative()
         {
-            var calculator = new Sqrt();
+            var calculator = new Arccos();
             var result = calculator.Calculate(-6);
         }
     }

@@ -10,7 +10,7 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
-            if ((argument < -1) && (argument > 1))
+            if ((argument < -1) || (argument > 1))
             {
                 throw new Exception("Argument not in range");
             }
