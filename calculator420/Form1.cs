@@ -73,27 +73,27 @@ namespace Calculator
             switch (i)
             {
                 case 1:
-                    Result.Text = "Чего-нить";
+                    Result.Text = "Something";
                     break;
                 case 2:
-                    Result.Text = "А я знаю, чего вам надо?";
+                    Result.Text = "What the fuck you want?";
                     break;
                 case 3:
-                    Result.Text = "Определитесь уже?";
-                    break;
-                case 4:
                     Result.Text = "42";
                     break;
-                case 5:
-                    Result.Text = "42, я сказал!";
+                case 4:
+                    Result.Text = "42, I said!";
                     break;
-                case 6:
+                case 5:
                     Result.Text = "А не знаю, просто 42 и всё";
                     break;
-                case 10:
-                    Result.Text = "Задолбали";
+                case 6:
+                    Result.Text = "Что-то не так?";
                     break;
-                case 11:
+                case 7:
+                    Result.Text = "Задолбали со своим Engrish'ем";
+                    break;
+                case 8:
                     throw new Exception("Пользователь задолбал программу");
             }
         }

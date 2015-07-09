@@ -1,4 +1,5 @@
-﻿using Calculator.TwoArgument;
+﻿using System;
+using Calculator.TwoArgument;
 using NUnit.Framework;
 
 namespace calculator.Tests.TwoArgument
@@ -7,15 +8,22 @@ namespace calculator.Tests.TwoArgument
 
     public class DivTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(1, 7, 0.14285, 0.00001)]
+        [TestCase(-6, 1, -6, 0.1)]
+        [TestCase(0, 2, 0, 0.1)]
+        [TestCase(-200, 5, -40, 0.1)]
+        public void CalculateTest(double firstArgument, double secondArgument, double result, double accracy)
         {
             var testingFunction = new Div();
-            Assert.AreEqual(0,142857142857143, testingFunction.Calculate(1, 7));
-            Assert.AreEqual(-6, testingFunction.Calculate(-6, 1));
-            Assert.AreEqual(0, testingFunction.Calculate(0, 2));
-            Assert.AreEqual(-40, testingFunction.Calculate(-200, 5));
-            Assert.AreEqual("NaN", testingFunction.Calculate(5, 0));
+            var testResult = testingFunction.Calculate(firstArgument, secondArgument);
+            Assert.AreEqual(result, testResult, accracy);
+        }
+        [Test]
+        [ExpectedException(typeof (Exception))]
+        public void DivisionTestByZero()
+        {
+            var calculator = new Div();
+            var result = calculator.Calculate(5, 0);
         }
     }
 }

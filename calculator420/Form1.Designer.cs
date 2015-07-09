@@ -198,7 +198,7 @@
             this.Cuntize.Name = "Cuntize";
             this.Cuntize.Size = new System.Drawing.Size(394, 23);
             this.Cuntize.TabIndex = 20;
-            this.Cuntize.Text = "Сделать чего-нить";
+            this.Cuntize.Text = "Do something";
             this.Cuntize.UseVisualStyleBackColor = true;
             this.Cuntize.Click += new System.EventHandler(this.SendUser);
             // 

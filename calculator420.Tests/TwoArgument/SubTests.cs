@@ -8,14 +8,16 @@ namespace calculator.Tests.TwoArgument
     public class SubTests
     {
         [Test]
-        public void CalculateTest()
+        [TestCase(1, 7, -6, 0.1)]
+        [TestCase(-6, 1, -7, 0.1)]
+        [TestCase(0, 2, -2, 0.1)]
+        [TestCase(-200, 5, -205, 0.1)]
+        [TestCase(10, 0, 10, 0.1)]
+        public void CalculateTest(double firstArgument, double secondArgument, double result, double accracy)
         {
             var testingFunction = new Sub();
-            Assert.AreEqual(8, testingFunction.Calculate(1, 7));
-            Assert.AreEqual(-5, testingFunction.Calculate(-6, 1));
-            Assert.AreEqual(2, testingFunction.Calculate(0, 2));
-            Assert.AreEqual(-195, testingFunction.Calculate(-200, 5));
-            Assert.AreEqual(11, testingFunction.Calculate(10, 1));
+            var testResult = testingFunction.Calculate(firstArgument, secondArgument);
+            Assert.AreEqual(result, testResult, accracy);
         }
     }
 }

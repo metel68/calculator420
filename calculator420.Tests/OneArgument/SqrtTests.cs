@@ -1,4 +1,5 @@
-﻿using Calculator.OneArgument;
+﻿using System;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace calculator.Tests.OneArgument
@@ -7,13 +8,20 @@ namespace calculator.Tests.OneArgument
 
     public class SqrtTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(9, 3, 0.1)]
+        [TestCase(0, 0, 0.1)]
+        public void CalculateTest(double argument, double result, double accracy)
         {
             var testingFunction = new Sqrt();
-            Assert.AreEqual(3, testingFunction.Calculate(9));
-            Assert.AreEqual("NaN", testingFunction.Calculate(-9));
-            Assert.AreEqual(0, testingFunction.Calculate(0));
+            var testResult = testingFunction.Calculate(argument);
+            Assert.AreEqual(result, testResult, accracy);
+        }
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void SqrtTestsNegative()
+        {
+            var calculator = new Sqrt();
+            var result = calculator.Calculate(-3);
         }
     }
 }

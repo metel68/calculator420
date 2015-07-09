@@ -7,15 +7,16 @@ namespace calculator.Tests.TwoArgument
 
     public class MultTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(1, 7, 7, 0.1)]
+        [TestCase(-6, 1, -6, 0.1)]
+        [TestCase(0, 2, 0, 0.1)]
+        [TestCase(-20, 5, -100, 0.1)]
+        [TestCase(-10, -3, 30, 0.1)]
+        public void CalculateTest(double firstArgument, double secondArgument, double result, double accracy)
         {
             var testingFunction = new Mult();
-            Assert.AreEqual(7, testingFunction.Calculate(1, 7));
-            Assert.AreEqual(-6, testingFunction.Calculate(-6, 1));
-            Assert.AreEqual(0, testingFunction.Calculate(0, 2));
-            Assert.AreEqual(-100, testingFunction.Calculate(-20, 5));
-            Assert.AreEqual(30, testingFunction.Calculate(-10, -3));
+            var testResult = testingFunction.Calculate(firstArgument, secondArgument);
+            Assert.AreEqual(result, testResult, accracy);
         }
     }
 }

@@ -7,15 +7,18 @@ namespace calculator.Tests.TwoArgument
 
     public class PowTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(1, 7, 1, 0.1)]
+        [TestCase(-6, 1, -6, 0.1)]
+        [TestCase(0, 2, 0, 0.1)]
+        [TestCase(-2, 5, -32, 0.1)]
+        [TestCase(10, 0, 1, 0.1)]
+        [TestCase(-15, 2, 225, 0.1)]
+        [TestCase(0, 0, 1, 0.1)]
+        public void CalculateTest(double firstArgument, double secondArgument, double result, double accracy)
         {
             var testingFunction = new Pow();
-            Assert.AreEqual(1, testingFunction.Calculate(1, 7));
-            Assert.AreEqual(-6, testingFunction.Calculate(-6, 1));
-            Assert.AreEqual(0, testingFunction.Calculate(0, 2));
-            Assert.AreEqual(32, testingFunction.Calculate(2, 5));
-            Assert.AreEqual(1, testingFunction.Calculate(10, 0));
+            var testResult = testingFunction.Calculate(firstArgument, secondArgument);
+            Assert.AreEqual(result, testResult, accracy);
         }
     }
 }

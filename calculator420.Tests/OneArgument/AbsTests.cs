@@ -15,7 +15,7 @@ namespace calculator.Tests.OneArgument
         {
             var testingFunction = new Abs();
             var testResult = testingFunction.Calculate(argument);
-            Assert.AreEqual(result, testResult);
+            Assert.AreEqual(result, testResult, accracy);
         }
     }
 }
