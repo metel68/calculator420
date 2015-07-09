@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace calculator.Tests.ArraySort
 {   
-    public class ArraySortTests
+    public abstract class ArraySortTests
     {
         protected IOperation Sorter;
         [TestCase(new[] {12.0, 5.0, 1.0, 6.0}, new[] {1.0, 5.0, 6.0, 12.0})]
