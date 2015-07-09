@@ -78,6 +78,7 @@
     <Compile Include="TwoArgument\Root.cs" />
     <Compile Include="TwoArgument\Sub.cs" />
     <Compile Include="TwoArgument\TwoArgumentFactory.cs" />
+    <Compile Include="Validation\Validator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

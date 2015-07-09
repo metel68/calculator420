@@ -8,7 +8,7 @@ namespace Calculator.OneArgument
         {
             if ((argument < -1) && (argument > 1))
             {
-                throw new Exception("Arccos lalala");
+                throw new Exception("Argument not in range");
             }
             else
             {

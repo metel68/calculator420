@@ -9,7 +9,7 @@ namespace Calculator.OneArgument
         {
             if ((argument < -1) && (argument > 1))
             {
-                throw new Exception("Arcsin lanana");
+                throw new Exception("Argument not in range");
             }
             else
             {

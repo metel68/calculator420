@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Resources;
 using System.Windows.Forms;
 using Calculator.ArraySort;
 using Calculator.OneArgument;
 using Calculator.TwoArgument;
+using Calculator.Validation;
+
 
 namespace Calculator
 {
@@ -14,23 +15,10 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private double StrToInt(String operand)
-        {
-            double result;
-            if (double.TryParse(operand, out result))
-            {
-                return result;
-            }
-            else
-            {
-                throw new Exception("Input error");
-            }
-        }
-
-
         private void ComputeOne(object sender, EventArgs e)
         {
-            double argument = StrToInt(FirstValue.Text);
+            var validator = new Validator();
+            double argument = validator.ValidateNumber(FirstValue.Text);
             string operation = ((Button) sender).Name;
             var op = OneArgmumentFactory.CreateCalculator(operation);
             double result = op.Calculate(argument);
@@ -39,8 +27,9 @@ namespace Calculator
 
         private void ComputeTwo(object sender, EventArgs e)
         {
-            double firstArgument = StrToInt(FirstValue.Text);
-            double secondArgument = StrToInt(SecondValue.Text);
+            var validator = new Validator();
+            double firstArgument = validator.ValidateNumber(FirstValue.Text);
+            double secondArgument = validator.ValidateNumber(SecondValue.Text);
             string operation = ((Button) sender).Name;
             var op = TwoArgmumentFactory.CreateCalculator(operation);
             double result = op.Calculate(firstArgument, secondArgument);
@@ -49,13 +38,8 @@ namespace Calculator
 
         private void SortArray(object sender, EventArgs e)
         {
-            string[] divider = {","};
-            string[] stringArray = FirstValue.Text.Split(divider, StringSplitOptions.RemoveEmptyEntries);
-            double[] argument = new double[stringArray.Length];
-            for (Int16 i = 0; i < stringArray.Length; i++)
-            {
-                argument[i] = StrToInt(stringArray[i]);
-            }
+            var validator = new Validator();
+            double[] argument = validator.ValidateArray(FirstValue.Text);
             string operation = ((Button)sender).Name;
             var op = ArraySortFactory.CreateCalculator(operation);
             op.Calculate(argument);
