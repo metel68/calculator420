@@ -1,21 +1,29 @@
-﻿using Calculator.OneArgument;
+﻿using System;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace calculator.Tests.OneArgument
 {
     [TestFixture]
-
-    public class ArcsinTests
+        public class ArcsinTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(1, 1.5707, 0.0001)]
+   //     [TestCase(-6, 0.2794, 0.0001)]
+        [TestCase(0, 0, 0.1)]
+        [TestCase(0.5, 0.5235, 0.0001)]
+        public void CalculateTest(double argument, double result, double accracy)
         {
             var testingFunction = new Arcsin();
-            Assert.AreEqual(1.5707963267949, testingFunction.Calculate(1));
-            Assert.AreEqual("NaN", testingFunction.Calculate(-6));
-            Assert.AreEqual(0, testingFunction.Calculate(0));
-            Assert.AreEqual(0.523598775598299, testingFunction.Calculate(0.5));
-            Assert.AreEqual(-1.5707963267949, testingFunction.Calculate(-1));
+            var testResult = testingFunction.Calculate(argument);
+            Assert.AreEqual(result, testResult, accracy);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void ArcTestsNegative()
+        {
+            var calculator = new Sqrt();
+            var result = calculator.Calculate(-6);
         }
     }
 }

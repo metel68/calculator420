@@ -7,7 +7,14 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
-            return Math.Asin(argument);
+            if (argument < 0)
+            {
+                throw new Exception("Arcsin from negative number");
+            }
+            else
+            {
+                return Math.Asin(argument);
+            }
         }
     }
 }

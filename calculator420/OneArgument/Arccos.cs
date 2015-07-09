@@ -6,7 +6,14 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
-            return Math.Acos(argument);
+            if (argument < 0)
+            {
+                throw new Exception("Arccos from negative number");
+            }
+            else
+            {
+                return Math.Acos(argument);
+            }
         }
     }
 }
