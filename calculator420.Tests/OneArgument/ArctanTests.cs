@@ -4,18 +4,18 @@ using NUnit.Framework;
 namespace calculator.Tests.OneArgument
 {
     [TestFixture]
-
-    public class ArctanTests
+        public class ArctanTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(1, 0.7853, 0.0001)]
+        [TestCase(-6, -1.4056, 0.0001)]
+        [TestCase(0, 0, 0.1)]
+        [TestCase(0.5, 0.4636, 0.0001)]
+        [TestCase(-1, -0.7853, 0.0001)]
+        public void CalculateTest(double argument, double result, double accracy)
         {
             var testingFunction = new Arctan();
-            Assert.AreEqual(0.785398163397448, testingFunction.Calculate(1));
-            Assert.AreEqual(-1.40564764938027, testingFunction.Calculate(-6));
-            Assert.AreEqual(0, testingFunction.Calculate(0));
-            Assert.AreEqual(0.463647609000806, testingFunction.Calculate(0.5));
-            Assert.AreEqual(-0.785398163397448, testingFunction.Calculate(-1));
+            var testResult = testingFunction.Calculate(argument);
+            Assert.AreEqual(result, testResult, accracy);
         }
     }
 }

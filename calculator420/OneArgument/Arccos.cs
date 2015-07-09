@@ -6,9 +6,9 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
-            if (argument < 0)
+            if ((argument < -1) && (argument > 1))
             {
-                throw new Exception("Arccos from negative number");
+                throw new Exception("Arccos lalala");
             }
             else
             {

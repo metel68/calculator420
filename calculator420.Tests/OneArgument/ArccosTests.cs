@@ -10,8 +10,8 @@ namespace calculator.Tests.OneArgument
     {
         [TestCase(1, 0, 0.1)]
        // [TestCase(-6, 0.2794, 0.0001)]
-        [TestCase(0, 0, 0.0001)]
-        [TestCase(0.5, 1.5707, 0.0001)]
+        [TestCase(0, 1.5707, 0.0001)]
+        [TestCase(0.5, 1.0471, 0.0001)]
         [TestCase(-1, 3.1415, 0.0001)]
         public void CalculateTest(double argument, double result, double accracy)
         {
