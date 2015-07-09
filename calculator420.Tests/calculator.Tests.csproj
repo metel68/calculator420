@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraySort\ArraySortTests.cs" />
+    <Compile Include="ArraySort\FastSortTests.cs" />
+    <Compile Include="ArraySort\SlowSortTests.cs" />
+    <Compile Include="ArraySort\SortTests.cs" />
     <Compile Include="OneArgument\OneArgumentTests.cs" />
     <Compile Include="OneArgument\AbsTests.cs" />
     <Compile Include="TwoArgument\TwoArgumentTests.cs" />
