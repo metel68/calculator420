@@ -2,6 +2,9 @@
 
 namespace Calculator.OneArgument
 {
+    /// <summary>
+    /// This class computes arccosine
+    /// </summary>
     public class Arccos : IOperation
     {
         public double Calculate(double argument)

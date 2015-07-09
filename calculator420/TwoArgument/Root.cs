@@ -2,6 +2,9 @@
 
 namespace Calculator.TwoArgument
 {
+    /// <summary>
+    /// This class performs extraction root for any reason
+    /// </summary>
     public class Root : IOperation
     {
         public double Calculate(double firstArgument, double secondArgument)
@@ -10,17 +13,12 @@ namespace Calculator.TwoArgument
             {
                 throw new Exception("Division by zero");
             }
-            else
+            if ((firstArgument < 0) && (secondArgument%2 == 0))
             {
-                if ((firstArgument < 0) && (secondArgument%2 == 0))
-                {
-                    throw new Exception("Even root from negatiwe number");
-                }
-                else
-                {
-                    return Math.Pow(firstArgument, 1/secondArgument);
-                }
+                throw new Exception("Even root from negatiwe number");
             }
+
+            return Math.Pow(firstArgument, 1/secondArgument);
         }
     }
 }

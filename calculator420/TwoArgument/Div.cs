@@ -2,6 +2,9 @@
 
 namespace Calculator.TwoArgument
 {
+    /// <summary>
+    /// This class performs division
+    /// </summary>
     public class Div : IOperation
     {
         public double Calculate(double firstArgument, double secondArgument)

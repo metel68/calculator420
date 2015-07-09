@@ -3,6 +3,9 @@
 namespace Calculator.OneArgument
 
 {
+    /// <summary>
+    /// This class computes arcsinus
+    /// </summary>
     public class Arcsin : IOperation
     {
         public double Calculate(double argument)

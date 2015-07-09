@@ -2,6 +2,9 @@
 
 namespace Calculator.OneArgument
 {
+    /// <summary>
+    /// This class performs extraction root
+    /// </summary>
     public class Sqrt : IOperation
     {
         public double Calculate(double argument)
