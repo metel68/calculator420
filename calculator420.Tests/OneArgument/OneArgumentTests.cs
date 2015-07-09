@@ -2,7 +2,7 @@
 using Calculator.OneArgument;
 using NUnit.Framework;
 
-namespace calculator.Tests
+namespace calculator.Tests.OneArgument
 {
     [TestFixture]
     public class OneArgumentTests

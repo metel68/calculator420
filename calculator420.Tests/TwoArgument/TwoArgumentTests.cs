@@ -2,7 +2,7 @@
 using Calculator.TwoArgument;
 using NUnit.Framework;
 
-namespace calculator.Tests
+namespace calculator.Tests.TwoArgument
 {
     [TestFixture]
     public class TwoArgumentTests
