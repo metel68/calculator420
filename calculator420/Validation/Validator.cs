@@ -28,7 +28,7 @@ namespace Calculator.Validation
         /// <returns>Array of parsed numbers</returns>
         public double[] ValidateArray(String operand)
         {
-            string[] divider = { "," };
+            string[] divider = { " " };
             string[] stringArray = operand.Split(divider, StringSplitOptions.RemoveEmptyEntries);
             double[] result = new double[stringArray.Length];
             for (Int16 i = 0; i < stringArray.Length; i++)
